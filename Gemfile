@@ -51,6 +51,8 @@ gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
 gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 4.2.0'
+
 
 group :development do
   gem 'capistrano', '~> 3.0.1'
