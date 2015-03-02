@@ -2,29 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-nav
-  width: 100%
-  padding: 15px 0
-  top: 0
-  color: #61B7E9
-  box-shadow: 0 1px 5px #A7A7A7
-  background-color: white
-
+body
+  background: asset_url("body_bg.jpg")
 ul
   list-style: none
   margin: 0
+#header
+  nav
+    width: 100%
+    padding: 15px 0
+    top: 0
+    color: #61B7E9
+    box-shadow: 0 1px 5px #A7A7A7
+    background-color: white
 
-  li
-    display: inline-block
-    margin: 0
-    padding: 0 10px
-
-body
-  background: asset_url("body_bg.jpg")
+  ul
+    li
+      display: inline-block
+      margin: 0
+      padding: 0 10px
 
 #content
   .container
-    margin-bottom: 20px
+    margin-bottom: 50px
     .product
       margin: 25px 10px
       padding: 10px
@@ -79,23 +79,45 @@ body
         cursor: pointer
 
 footer
-  background: #353535
-  color: white
-  height: 40%
+  background: #F8F8F8
+  color: #000
+  height: 100%
   width: 100%
 
   .container-fluid
     height: 100%
-    padding-top: 40px
-    /*position: relative*/
+
+    .info
+      margin-left: 30%
+
+      a:hover
+        text-decoration: none
+    .list-icon
+      list-style: none
+      margin: 0
+
+      li
+        display: inline-block
+        margin: 5px 20px
+
+        a
+          color: #999
+          font-size: 25pt
+
+          &:hover
+            .fa-facebook-square
+              color: #3C568C
+            .fa-twitter-square
+              color: #428BCA
+            .fa-google-plus-square
+              color: #D3474F
 
   .copy-right
-    /*position: absolute*/
     width: 100%
     height: 50px
     bottom: 0
     color: white
-    background: #111
+    background: #999
 
     h5
       line-height: 50px
