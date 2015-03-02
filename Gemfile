@@ -50,6 +50,7 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
+gem "font-awesome-rails"
 
 group :development do
   gem 'capistrano', '~> 3.0.1'
