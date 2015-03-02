@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 nav
-  position: fixed
   width: 100%
   padding: 15px 0
   top: 0
-  z-index: 1001
-  color: red
+  color: #61B7E9
+  box-shadow: 0 1px 5px #A7A7A7
+  background-color: white
 
 ul
   list-style: none
@@ -18,7 +18,66 @@ ul
     display: inline-block
     margin: 0
     padding: 0 10px
-    
+
+body
+  background: asset_url("body_bg.jpg")
+
+#content
+  .container
+    margin-bottom: 20px
+    .product
+      margin: 25px 10px
+      padding: 10px
+      text-align: center
+      color: #333333
+      font-size: x-large
+
+    .underline
+      position: relative
+
+      &:after
+        content: ""
+        width: 100px
+        height: 2px
+        background: #75AD49
+        position: absolute
+        bottom: 0
+        left: 50%
+        margin-left: -50px
+
+    .item
+      overflow: hidden
+      .img-product
+        width: 100%
+        height: 200px
+        background-size: cover !important
+        background-position: 50% 50% !important
+        transition: all 0.5s ease
+
+        &:hover
+          transform: scale(1.1)
+          cursor: pointer
+
+          .overlay
+            opacity: 1
+
+            .content
+              opacity: 1
+
+        .overlay
+          width: 100%
+          height: 100%
+          opacity: 0
+          background: rgba(0, 0, 0, 0.6)
+          transition: all 0.5s ease
+
+    .content
+      padding-top: 10px
+
+      a
+        text-decoration: none
+        cursor: pointer
+
 footer
   background: #353535
   color: white
@@ -28,30 +87,12 @@ footer
   .container-fluid
     height: 100%
     padding-top: 40px
-    position: relative
-
-  .social-connection
-    padding: 30px 0
-    font: 30px
-
-    .fa-stack
-      font-size: 2em
-
-    .fa-stack-2x.fb
-      color: #3B5998
-    .fa-stack-2x.tw
-      color: #5EA9DD
-    .fa-stack-2x.gp
-      color: #DF4B38
-
-    .fa-stack-1x
-      color: white
+    /*position: relative*/
 
   .copy-right
-    position: absolute
+    /*position: absolute*/
     width: 100%
     height: 50px
-    text-align: center
     bottom: 0
     color: white
     background: #111
@@ -59,5 +100,3 @@ footer
     h5
       line-height: 50px
       margin: 0
-a
-  text-decoration: none

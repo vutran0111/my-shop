@@ -1,0 +1,26 @@
+.container
+  .new-product
+    .product.underline
+      | FEATURES PRODUCTS
+    .row
+      - 3.times do |i|
+        .col-md-4.col-sm-2.col-xs-12
+          .item
+            .img-product style = ("background: url(#{asset_url("new_#{i+1}.jpg")}) center;")
+              .overlay
+          .content
+            a Integer Tempor
+            p price: 150.0
+
+  .latest-product
+    .product.underline
+      | LATEST PRODUCTS
+    .row
+      - 3.times do |i|
+        .col-md-4.col-sm-2.col-xs-12
+          .item
+            .img-product style = ("background: url(#{asset_url("latest_#{i+1}.jpg")}) center;")
+              .overlay
+          .content
+            a Integer Tempor
+            p price: 150.0
