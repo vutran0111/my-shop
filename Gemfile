@@ -52,6 +52,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem "font-awesome-rails"
 gem 'font-awesome-sass', '~> 4.2.0'
+gem 'owlcarousel-rails'
 
 
 group :development do
