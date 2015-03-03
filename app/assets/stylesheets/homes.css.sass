@@ -4,17 +4,19 @@
 
 body
   background: asset_url("body_bg.jpg")
+
 ul
   list-style: none
   margin: 0
+
 #header
   nav
     width: 100%
-    padding: 15px 0
+    padding: 20px 0
     top: 0
-    color: #61B7E9
-    box-shadow: 0 1px 5px #A7A7A7
-    background-color: white
+    color: white
+    box-shadow: 0 5px 5px #A7A7A7
+    background-color: #66A538
 
   ul
     li
@@ -61,8 +63,9 @@ ul
           .overlay
             opacity: 1
 
-            .content
+            .prices
               opacity: 1
+              transition: 400ms
 
         .overlay
           width: 100%
@@ -71,12 +74,29 @@ ul
           background: rgba(0, 0, 0, 0.6)
           transition: all 0.5s ease
 
+          .prices
+            position: relative
+            top: 50%
+            left: 40%
+            opacity: 0
+            transition: all 1s ease
+            color: white
+            font-weight: bold
+
     .content
       padding-top: 10px
 
+      .title
+        font-size: 18px
+        font-weight: 500
+
       a
+        color: #777
         text-decoration: none
         cursor: pointer
+
+        &:hover
+          color: #62A83D
 
 footer
   background: #F8F8F8
@@ -90,8 +110,12 @@ footer
     .info
       margin-left: 30%
 
-      a:hover
-        text-decoration: none
+      a
+        color: #1A1A1A
+
+        &:hover
+          color: #62A83D
+          text-decoration: none
     .list-icon
       list-style: none
       margin: 0
@@ -117,7 +141,7 @@ footer
     height: 50px
     bottom: 0
     color: white
-    background: #999
+    background: #62A83D
 
     h5
       line-height: 50px
