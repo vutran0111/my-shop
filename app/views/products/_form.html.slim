@@ -1,21 +1,11 @@
-= form_for @product do |f|
-  - if @product.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
-      ul
-        - @product.errors.full_messages.each do |message|
-          li = message
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :prices
-    = f.number_field :prices
-  .field
-    = f.label :categories
-    = f.text_field :categories
-  .actions = f.submit
+= simple_form_for @product do |f|
+  .field-wrapper
+    = f.input :name, label: false, input_html: { placeholder: "Name" }
+  .field-wrapper
+    = f.input :description, label: false, input_html: { placeholder: "Description" }
+  .field-wrapper
+    = f.input :prices, label: false, as: :integer, input_html: { placeholder: "Prices" }
+  .field-wrapper
+    = f.input :categories, label: false, input_html: { placeholder: "Categories" }
+  .actions
+    = f.button :submit, "Save Products"
