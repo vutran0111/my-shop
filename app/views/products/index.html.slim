@@ -1,29 +1,23 @@
-h1 Listing products
+.product-wrapper
+  .container
+    .row
+      .logo.text-center
+       | LOGO
 
-table
-  thead
-    tr
-      th Name
-      th Description
-      th Prices
-      th Categories
-      th
-      th
-      th
-
-  tbody
-    - @products.each do |product|
-      tr
-        td = product.name
-        td = product.description
-        td = product.prices
-        td = product.categories
-        td = link_to 'Show', product
-        td = link_to 'Edit', edit_product_path(product)
-        td = link_to 'Destroy', product, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-= paginate @products
-
-br
-
-= link_to 'New Product', new_product_path
+    .row
+      - 24.times do |i|
+        .col-md-3.col-sm-2.col-xs-12
+          .img-item style = ("background: url(#{asset_url("product.jpg")}) center;")
+            .overlay
+          /   =link_to image_tag("product.jpg"), "#"
+          .infomation
+            .wrapper
+              .title.text-center
+                | Responsive Email
+              .des.text-center
+                | You may only purchase one unit of each product at the promotional.
+              .bottom-box
+                .price-pro
+                  | $19
+                .more
+                  | BUY NOW/MORE INFO
