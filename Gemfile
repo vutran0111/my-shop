@@ -51,6 +51,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'kaminari'
+gem 'owlcarousel-rails'
 
 group :development do
   gem 'capistrano', '~> 3.0.1'

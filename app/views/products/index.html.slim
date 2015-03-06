@@ -1,23 +1,22 @@
 .product-wrapper
+  #carousel
+    = render 'shared/carousel'
   .container
-    .row
-      .logo.text-center
-       | LOGO
-
-    .row
-      - 24.times do |i|
-        .col-md-3.col-sm-2.col-xs-12
-          .img-item style = ("background: url(#{asset_url("product.jpg")}) center;")
-            .overlay
-          /   =link_to image_tag("product.jpg"), "#"
-          .infomation
-            .wrapper
-              .title.text-center
-                | Responsive Email
-              .des.text-center
-                | You may only purchase one unit of each product at the promotional.
-              .bottom-box
-                .price-pro
-                  | $19
-                .more
-                  | BUY NOW/MORE INFO
+    .all-product
+      .row
+        - 24.times do |i|
+          .col-md-3.col-sm-2.col-xs-12
+            .img-item style = ("background: url(#{asset_url("product.jpg")}) center;")
+              .overlay
+            /   =link_to image_tag("product.jpg"), "#"
+            .infomation
+              .wrapper
+                .title.text-center
+                  | Responsive Email
+                .des.text-center
+                  | You may only purchase one unit of each product at the promotional.
+                .bottom-box
+                  .price-pro
+                    | $19
+                  .more
+                    | BUY NOW/MORE INFO
