@@ -7,5 +7,7 @@
     = f.input :prices, label: false, as: :integer, input_html: { placeholder: "Prices" }
   .field-wrapper
     = f.input :categories, label: false, input_html: { placeholder: "Categories" }
+  .field-wrapper
+    = f.input :image, as: :file, label: false
   .actions
     = f.button :submit, "Save Products"

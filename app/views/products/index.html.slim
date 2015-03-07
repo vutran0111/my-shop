@@ -4,19 +4,22 @@
   .container
     .all-product
       .row
-        - 24.times do |i|
+        / - 24.times do |i|
+        - @products.each do |product|
           .col-md-3.col-sm-2.col-xs-12
-            .img-item style = ("background: url(#{asset_url("product.jpg")}) center;")
+            .img-item style = ("background: url(#{product.image.url}) center;")
               .overlay
             /   =link_to image_tag("product.jpg"), "#"
             .infomation
               .wrapper
                 .title.text-center
-                  | Responsive Email
+                  = product.name
                 .des.text-center
-                  | You may only purchase one unit of each product at the promotional.
+                  = product.description
                 .bottom-box
                   .price-pro
-                    | $19
+                    = product.prices
                   .more
                     | BUY NOW/MORE INFO
+    = paginate @products
+  = link_to 'New Product', new_product_path
