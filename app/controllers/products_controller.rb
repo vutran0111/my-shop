@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = set_page_params.per(8)
+    @products = Product.order(:created_at).page(params[:page]).per(8)
   end
 
   # GET /products/1
@@ -72,7 +72,7 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :description, :prices, :categories, :image)
     end
 
-    def set_page_params
-      @products = Product.page(params[:page])
+    def page_params
+      params.permit(:page)
     end
 end
