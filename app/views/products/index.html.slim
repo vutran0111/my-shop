@@ -3,13 +3,23 @@
     = render 'shared/carousel'
   .container
     .all-product
+      .title-wrapper
+        .ls-product.text-center
+          span.underline ALL PRODUCTS
+      .categories
+        .row
+          .col-md-3
+          - %w(ALL FOOD NATURAL ORGANIC PROTEIN VITAMINS).each do |i|
+            .col-md-1.text-center
+              =link_to "#{i}", "#"
+          .col-md-3
+
       .row
         / - 24.times do |i|
         - @products.each do |product|
           .col-md-3.col-sm-2.col-xs-12
-            .img-item style = ("background: url(#{product.image.url}) center;")
-              .overlay
-            /   =link_to image_tag("product.jpg"), "#"
+            .ls-item
+              .img-item style = ("background: url(#{product.image.url}) center;")
             .infomation
               .wrapper
                 .title.text-center
@@ -21,5 +31,6 @@
                     = product.prices
                   .more
                     | BUY NOW/MORE INFO
-    = paginate @products
+
+      = paginate @products
   = link_to 'New Product', new_product_path
