@@ -54,6 +54,7 @@ gem 'kaminari'
 gem 'owlcarousel-rails'
 gem 'paperclip'
 
+
 group :development do
   gem 'capistrano', '~> 3.0.1'
   gem 'capistrano-bundler'

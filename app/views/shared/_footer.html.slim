@@ -1,0 +1,28 @@
+.container-fluid
+  .row
+    .col-md-4.text-center
+      h2 Information
+      .info.text-left
+        ul
+          li
+            = link_to "About Us", "#"
+          li
+            = link_to "Delivery Information", "#"
+          li
+            = link_to "Privacy Policy", "#"
+          li
+            = link_to "Term & Condition", "#"
+
+    .col-md-8.text-center
+      h2 Follow Us
+      ul.list-icon
+        - %w(facebook-square twitter-square google-plus-square).each do |i|
+          li.fa-stack.fa-lg
+            = link_to "#" 
+              = icon i
+
+  .row
+    col-md-12
+      .copy-right.text-center
+        h5 Copyright by TenLuaWeb
+
