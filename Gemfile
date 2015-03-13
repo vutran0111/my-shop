@@ -54,6 +54,7 @@ gem 'kaminari'
 gem 'owlcarousel-rails'
 gem 'paperclip'
 gem 'font-awesome-sass'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 
 group :development do
