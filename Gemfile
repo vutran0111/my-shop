@@ -53,6 +53,7 @@ gem 'slim-rails'
 gem 'kaminari'
 gem 'owlcarousel-rails'
 gem 'paperclip'
+gem 'font-awesome-sass'
 
 
 group :development do
