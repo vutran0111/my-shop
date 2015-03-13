@@ -22,5 +22,5 @@ $(document).ready(function() {
     autoPlay: true,
     responsiveBaseWidth: window
   });
-  $("#owl-carousel .bg-img").css("height", $(window).height())
+  $("#owl-carousel .bg-img").css("height", $(window).height());
 });
