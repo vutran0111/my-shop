@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require owl.carousel
+
+$(document).ready(function() {
+  $("#owl-carousel").owlCarousel({
+    singleItem:true,
+    autoPlay: true
+  });
+  $("#owl-carousel .bg-img").css("height", $(window).height())
+});
