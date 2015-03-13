@@ -29,9 +29,4 @@ ActiveRecord::Schema.define(version: 20150307032344) do
     t.datetime "image_updated_at"
   end
 
-  create_table "trigrams", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
