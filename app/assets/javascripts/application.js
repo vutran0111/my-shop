@@ -19,7 +19,8 @@
 $(document).ready(function() {
   $("#owl-carousel").owlCarousel({
     singleItem:true,
-    autoPlay: true
+    autoPlay: true,
+    responsiveBaseWidth: window
   });
-  $("#owl-carousel .bg-img").css("height", $(window).height())
+  $("#owl-carousel .bg-img").css("height", $(window).height());
 });

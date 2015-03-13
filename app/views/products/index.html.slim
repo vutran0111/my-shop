@@ -1,0 +1,41 @@
+.product-wrapper
+  .slide
+    = render 'shared/carousel'
+  .container
+    .all-product
+      .title-wrapper
+        .ls-product.text-center
+          span.underline-pro ALL PRODUCTS
+      .categories
+        .row
+          .col-md-3
+            |
+          - %w(ALL FOOD NATURAL ORGANIC PROTEIN VITAMINS).each do |i|
+            .col-md-1.text-center
+              =link_to "#{i}", "#"
+          .col-md-3
+            |
+
+      .row
+        / - 24.times do |i|
+        - @products.each do |product|
+          .col-md-3.col-sm-2.col-xs-12
+            .ls-item
+              .img-item style = ("background: url(#{product.image.url}) center;")
+            .infomation
+              .wrapper
+                .title.text-center
+                  = product.name
+                .des.text-center
+                  = product.description
+                .bottom-box
+                  .price-pro
+                    = product.prices
+                  .more
+                    | BUY NOW/MORE INFO
+
+      = paginate @products, :method => :post
+  = link_to 'New Product', new_product_path
+
+footer
+  = render 'shared/footer'
