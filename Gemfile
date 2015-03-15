@@ -54,7 +54,7 @@ gem 'kaminari'
 gem 'owlcarousel-rails'
 gem 'paperclip'
 gem 'font-awesome-sass'
-
+gem 'fuzzily'
 
 group :development do
   gem 'capistrano', '~> 3.0.1'

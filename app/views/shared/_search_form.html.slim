@@ -1,0 +1,7 @@
+= form_tag products_path, :class => "navbar-form search", method: :get do
+  .navbar-form.navbar-right
+    .form-group
+      = text_field_tag :search, params[:search], :placeholder => "Search...", :class => "form-control"
+    button type="submit" name="nil" class="btn btn-success"
+      span.fa.fa-search
+end

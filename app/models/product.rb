@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+
+  fuzzily_searchable :name, :description, :categories
+
   validates :name, :description, :categories, presence: true
   validates :prices, numericality: { only_integer: true }
 
